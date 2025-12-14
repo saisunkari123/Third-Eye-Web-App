@@ -1,0 +1,7 @@
+{
+  "name": "THIRD EYE",
+  "description": "Intelligent Scene Narrator for visually impaired users using Gemini AI.",
+  "requestFramePermissions": [
+    "camera"
+  ]
+}

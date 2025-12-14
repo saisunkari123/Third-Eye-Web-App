@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0, viewport-fit=cover" />
+    <title>THIRD EYE</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              'high-contrast-bg': '#000000',
+              'high-contrast-text': '#FFD700', // Gold/Yellow
+              'high-contrast-accent': '#FFFFFF',
+              'neo-bg': '#F8FAFC', // Slate 50
+              'neo-text': '#0F172A', // Slate 900
+              'neo-accent': '#2563EB', // Blue 600
+              'glow-bg': '#0F172A', // Slate 900
+              'glow-text': '#F8FAFC', // Slate 50
+            },
+            fontFamily: {
+              sans: ['Inter', 'system-ui', 'sans-serif'],
+            },
+            animation: {
+              'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+              'slide-in': 'slideIn 0.3s ease-out forwards',
+            },
+            keyframes: {
+              slideIn: {
+                '0%': { transform: 'translateX(100%)' },
+                '100%': { transform: 'translateX(0)' },
+              }
+            }
+          },
+        },
+      }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <style>
+      /* Accessibility Focus Styles */
+      :focus-visible {
+        outline: 4px solid #FFD700;
+        outline-offset: 2px;
+      }
+      /* Hide scrollbar for cleaner mobile UI */
+      .no-scrollbar::-webkit-scrollbar {
+        display: none;
+      }
+      .no-scrollbar {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+      }
+      /* Safe Area Utilities for Mobile */
+      .pt-safe-top {
+        padding-top: env(safe-area-inset-top, 20px);
+      }
+      .pb-safe-bottom {
+        padding-bottom: env(safe-area-inset-bottom, 20px);
+      }
+      .h-dvh {
+        height: 100vh; /* Fallback */
+        height: 100dvh;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "@google/genai": "https://esm.sh/@google/genai@^1.33.0",
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "react": "https://esm.sh/react@^19.2.3",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/"
+  }
+}
+</script>
+</head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
