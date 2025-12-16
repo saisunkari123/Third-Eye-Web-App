@@ -3,7 +3,7 @@ import { AppMode } from "../types";
 import { MODE_CONFIG } from "../constants";
 
 // Fallback Key provided for Expo/Demo purposes
-const EXPO_API_KEY = 'AIzaSyCOF8YIFwOQ6coRKa4LbOKR06OGg-24DFk';
+const EXPO_API_KEY = ;
 
 // Initialize AI client
 // Uses environment variable if available, otherwise falls back to the expo key
